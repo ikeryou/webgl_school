@@ -14,8 +14,6 @@ class Param
     # メインビジュアル用パラメータ
     @mv = {
       speed:{value:20, min:1, max:100}
-      light_num:{value:5, min:1, max:10}
-      light_pos_range:{value:50, min:1, max:100}
       mesh_num:{value:10, min:1, max:100}
       mesh_seg:{value:16, min:1, max:128}
       mesh_scale_min:{value:20, min:1, max:100}
@@ -81,8 +79,8 @@ class Param
       @mv.mesh_move_range.value = 42
       @mv.mesh_move_z.value = 100
       @mv.mesh_move_z2.value = 100
-      @mv.light_power.value = 565
-      @mv.brightness.value = -40
+      @mv.light_power.value = 1000
+      @mv.brightness.value = 0
       @mv.contrastR.value = 100
       @mv.contrastG.value = 55
       @mv.contrastB.value = 100

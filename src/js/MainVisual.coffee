@@ -60,13 +60,13 @@ class MainVisual extends Canvas
     @mainScene.add(@_dest)
 
     if Conf.FLG.PARAM
-      Param.mv.light_num.gui.onFinishChange((val) =>
-        @_resize()
-      )
-
-      Param.mv.light_pos_range.gui.onFinishChange((val) =>
-        @_resize()
-      )
+      # Param.mv.light_num.gui.onFinishChange((val) =>
+      #   @_resize()
+      # )
+      #
+      # Param.mv.light_pos_range.gui.onFinishChange((val) =>
+      #   @_resize()
+      # )
 
       Param.mv.mesh_num.gui.onFinishChange((val) =>
         @_resize()
@@ -192,17 +192,21 @@ class MainVisual extends Canvas
     w = window.innerWidth * 2
     h = window.innerHeight * 2
 
+    x = [1, -2, 3, -4, 5]
+    y = [1, -2, 3, -4, 5]
+    z = [1, -2, 3, -4, 5]
+
     i = 0
-    num = ~~(Param.mv.light_num.value)
+    num = 5
     while i < num
 
       light = new THREE.PointLight(0xffffff, 1, 0)
 
-      r = Param.mv.light_pos_range.value * 0.1
+      r = 5
       light.position.set(
-        w * Util.range(r),
-        h * Util.range(r),
-        w * Util.range(r) * 2
+        w * x[i] * -1,
+        h * y[i],
+        w * z[i] * 2
       )
 
       @_light.push(light)
