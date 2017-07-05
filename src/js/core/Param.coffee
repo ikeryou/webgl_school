@@ -70,6 +70,27 @@ class Param
       @mv.lineScaleR.value = 2
       @mv.title.value = true
 
+    if location.href.indexOf('b=1') > 0
+      @mv.mesh_num.value = 25
+      @mv.mesh_seg.value = 1
+      @mv.mesh_num.value = 100
+      @mv.mesh_scale_min.value = 20
+      @mv.mesh_scale_max.value = 30
+      @mv.mesh_pos_range.value = 1
+      @mv.mesh_opacity.value = 9
+      @mv.mesh_move_range.value = 42
+      @mv.mesh_move_z.value = 100
+      @mv.mesh_move_z2.value = 100
+      @mv.light_power.value = 565
+      @mv.brightness.value = -40
+      @mv.contrastR.value = 100
+      @mv.contrastG.value = 55
+      @mv.contrastB.value = 100
+      @mv.lineScaleG.value = 50
+      @mv.lineScaleB.value = 50
+      @mv.discard_alpha.value = 33
+      @mv.title.value = true
+
     if !Conf.FLG.PARAM
       return
 
